@@ -8,4 +8,10 @@
 
 
 // DOCUMENT READY FUNCTION BELOW
+$("#shoot").click(function(){
+    let playerChoice = $("#input").val();
+    let options = ["rock", "scissors", "paper"];
+    let randomChoice = options.random();
+    $("#userChoice").html(playerChoice);
 
+})
