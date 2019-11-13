@@ -24,7 +24,7 @@ $("#shoot").click(function(){
     $("#computerChoice").html(computerResult);
     if (playerChoice == "rock" && computerResult == "Scissors" || 
         playerChoice == "scissor" && computerResult == "Paper" ||
-        playerChoice == "paper" && computerResult == "Rock"
+        playerChoice == "paper" && computerResult == "Rock" ||
         playerChoice == "Rock" && computerResult == "Scissors" || 
         playerChoice == "Scissor" && computerResult == "Paper" ||
         playerChoice == "Paper" && computerResult == "Rock") {
@@ -32,7 +32,7 @@ $("#shoot").click(function(){
         $("#result").html("User Wins!");
     } else if (playerChoice == "rock" && computerResult == "Paper" || 
                 playerChoice == "scissor" && computerResult == "Rock" ||
-                playerChoice == "paper" && computerResult == "Scissor"
+                playerChoice == "paper" && computerResult == "Scissor" ||
                 playerChoice == "Rock" && computerResult == "Paper" || 
                 playerChoice == "Scissor" && computerResult == "Rock" ||
                 playerChoice == "Paper" && computerResult == "Scissor") {
