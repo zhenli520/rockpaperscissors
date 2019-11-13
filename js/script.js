@@ -10,8 +10,35 @@
 // DOCUMENT READY FUNCTION BELOW
 $("#shoot").click(function(){
     let playerChoice = $("#input").val();
-    let options = ["rock", "scissors", "paper"];
-    let randomChoice = options.random();
+    let randomNum = Math.random();
+    randomNum = randomNum * 10;
     $("#userChoice").html(playerChoice);
+    let computerChoice = "";
+    if(randomNum > 6){
+        computerResult = "Rock";
+    } else if(randomNum >= 3 && randomNum <= 6){
+        computerResult = "Paper";
+    } else {
+        computerResult = "Scissors";
+    }
+    $("#computerChoice").html(computerResult);
+    if (playerChoice == "rock" && computerResult == "Scissors" || 
+        playerChoice == "scissor" && computerResult == "Paper" ||
+        playerChoice == "paper" && computerResult == "Rock"
+        playerChoice == "Rock" && computerResult == "Scissors" || 
+        playerChoice == "Scissor" && computerResult == "Paper" ||
+        playerChoice == "Paper" && computerResult == "Rock") {
 
+        $("#result").html("User Wins!");
+    } else if (playerChoice == "rock" && computerResult == "Paper" || 
+                playerChoice == "scissor" && computerResult == "Rock" ||
+                playerChoice == "paper" && computerResult == "Scissor"
+                playerChoice == "Rock" && computerResult == "Paper" || 
+                playerChoice == "Scissor" && computerResult == "Rock" ||
+                playerChoice == "Paper" && computerResult == "Scissor") {
+
+        $("#result").html("Computer Wins!");
+    } else {
+        $("#result").html("Draw!");
+    }
 })
