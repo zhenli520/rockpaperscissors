@@ -10,6 +10,7 @@
 // DOCUMENT READY FUNCTION BELOW
 $("#shoot").click(function(){
     let playerChoice = $("#input").val();
+    playerChoice = playerChoice.toLowerCase();
     let randomNum = Math.random();
     randomNum = randomNum * 10;
     $("#userChoice").html(playerChoice);
@@ -24,18 +25,12 @@ $("#shoot").click(function(){
     $("#computerChoice").html(computerResult);
     if (playerChoice == "rock" && computerResult == "Scissors" || 
         playerChoice == "scissor" && computerResult == "Paper" ||
-        playerChoice == "paper" && computerResult == "Rock" ||
-        playerChoice == "Rock" && computerResult == "Scissors" || 
-        playerChoice == "Scissor" && computerResult == "Paper" ||
-        playerChoice == "Paper" && computerResult == "Rock") {
+        playerChoice == "paper" && computerResult == "Rock" ) {
 
         $("#result").html("User Wins!");
     } else if (playerChoice == "rock" && computerResult == "Paper" || 
                 playerChoice == "scissor" && computerResult == "Rock" ||
-                playerChoice == "paper" && computerResult == "Scissor" ||
-                playerChoice == "Rock" && computerResult == "Paper" || 
-                playerChoice == "Scissor" && computerResult == "Rock" ||
-                playerChoice == "Paper" && computerResult == "Scissor") {
+                playerChoice == "paper" && computerResult == "Scissor") {
 
         $("#result").html("Computer Wins!");
     } else {
